@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3;background:black;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var total = 500;
+var srt = 20;
+var end = total-2*srt;
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = 'red';
+ctx.fillRect(srt,srt,end,end);
+
+//center circles
+ctx.beginPath();
+ctx.arc(250,250,50,0,2*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(250,250,57,0,2*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(250,250,10,0,2*Math.PI);
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+//striker container lines
+ctx.fillRect(4*srt+30,4*srt,280,20);
+ctx.stroke();
+ctx.fillRect(4*srt,4*srt+35,20,280);
+ctx.stroke();
+ctx.fillRect(400,4*srt+35,20,280);
+ctx.stroke();
+ctx.fillRect(4*srt+30,410,280,20);
+ctx.stroke();
+
+//striker red circles
+ctx.beginPath();
+ctx.arc(4*srt+35,4*srt+10,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(4*srt+35,420,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(4*srt+10,4*srt+40,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(410,4*srt+40,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(4*srt+10,390,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(410,390,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(390,4*srt+10,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(390,420,10,0,2*Math.PI);
+ctx.fillStyle = 'white';
+ctx.fill();
+ctx.stroke();
+
+
+
+
+
+
+//corner circles
+//left top
+ctx.beginPath();
+ctx.arc(35,35,20,0,2*Math.PI);
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+//right top
+ctx.beginPath();
+ctx.arc(465,35,20,0,2*Math.PI);
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+//left bottom
+ctx.beginPath();
+ctx.arc(35,465,20,0,2*Math.PI);
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+
+//right bottom
+ctx.beginPath();
+ctx.arc(465,465,20,0,2*Math.PI);
+ctx.fillStyle = 'black';
+ctx.fill();
+ctx.stroke();
+</script> 
+
+</body>
+</html>
